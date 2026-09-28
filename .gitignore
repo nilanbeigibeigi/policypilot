@@ -1,0 +1,7 @@
+index/
+reports/
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.claude/settings.local.json
