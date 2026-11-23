@@ -8,6 +8,8 @@ Employees ask questions in plain English; PolicyPilot answers **only from the co
 
 Built for a fictional Persian grocery store, **Saffron Market** (6 policy documents: handbook, opening/closing, food safety, returns, loyalty, safety). Runs **100% free and local** with Ollama — no company data leaves the computer.
 
+> **New — Advisor Edition:** the same engine on a fictional financial-advisory firm's documents (onboarding/KYC, client reviews, group benefits, life insurance, privacy & AI use, compliance). See [ADVISOR_EDITION.md](ADVISOR_EDITION.md).
+
 ## Why I built it
 As an assistant manager in retail, I answered the same questions from staff every week — refunds, fridge temperatures, sick days. The answers were all in documents nobody read. This is the most common AI project companies start with: *"let our people ask our documents."*
 
