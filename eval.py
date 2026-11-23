@@ -21,7 +21,7 @@ LLM = os.environ.get("LLM", "ollama")
 
 
 def run(index=None, llm=LLM, k=K, verbose=True):
-    questions = json.load(open(os.path.join(rag.HERE, "eval_questions.json")))
+    questions = json.load(open(os.path.join(rag.HERE, os.environ.get("EVAL_FILE", "eval_questions.json"))))
     index = index or rag.Index.build()
     rows, t0 = [], time.time()
     for item in questions:

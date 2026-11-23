@@ -30,7 +30,7 @@ def get_index(name: str):
 
 # ---------------- main
 st.title("🧭 PolicyPilot")
-st.caption("Ask anything about Saffron Market's policies. Answers come only from company documents, with sources.")
+st.caption(f"Ask anything about {rag.ORG_NAME}'s documents. Answers come only from those documents, with sources.")
 
 try:
     index = get_index(embedder)

@@ -20,8 +20,10 @@ import urllib.request
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DOCS_DIR = os.path.join(HERE, "docs")
-INDEX_DIR = os.path.join(HERE, "index")
+DOCS_DIR = os.path.join(HERE, os.environ.get("POLICYPILOT_DOCS", "docs"))
+ORG_NAME = os.environ.get("ORG_NAME", "Saffron Market")
+AUDIENCE = os.environ.get("AUDIENCE", "employees")
+INDEX_DIR = os.path.join(HERE, "index", os.path.basename(DOCS_DIR))
 
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "nomic-embed-text")
@@ -31,7 +33,7 @@ EMBEDDER = os.environ.get("EMBEDDER", "ollama")   # "ollama" or "tfidf" (offline
 
 NO_ANSWER = "I don't know based on the company documents."
 
-SYSTEM_PROMPT = f"""You are PolicyPilot, an assistant for Saffron Market employees.
+SYSTEM_PROMPT = f"""You are PolicyPilot, an assistant for {ORG_NAME} {AUDIENCE}.
 Answer the question using ONLY the numbered sources below.
 Rules:
 - Cite the source number for every fact, like [1] or [2].
